@@ -18,10 +18,6 @@ function Map() {
         this.data[key] = null;
     };
 
-    this.empty = function () {
-        return this.keys.length == 0;
-    };
-
     this.count = function () {
         return this.keys.length;
     };

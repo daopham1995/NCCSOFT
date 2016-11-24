@@ -1,10 +1,9 @@
 function Stack()
 {
     this.stack = new Array();
-    this.top = 0;
 
 	this.push = function(element) {
-		stack.push(element);
+		this.stack.push(element);
 	};
 
 	this.pop = function() {
@@ -12,10 +11,11 @@ function Stack()
 	};
 
 	this.count = function() {
-        for (var key in this.stack){
-            this.top ++;
-        }
-		return this.top;
+        var count = 0;
+		for (var key in this.stack) {
+			++count;
+		}
+		return count;
 	};
 
 	this.length = function() {
@@ -23,7 +23,7 @@ function Stack()
 	};
 
 	this.empty = function() {
-		return (this.stack.length === 0);
+		return (this.stack.length = 0);
 	};
 
 	this.getStack = function() {
